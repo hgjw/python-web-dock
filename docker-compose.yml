@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 
 networks:
   frontend:
@@ -7,6 +7,8 @@ networks:
     driver: ${NETWORKS_DRIVER}
 
 volumes:
+  python:
+    driver: ${VOLUMES_DRIVER}
   mysql:
     driver: ${VOLUMES_DRIVER}
   redis:
@@ -24,6 +26,7 @@ services:
       volumes:
         - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}
         - ${UWSGI_VASSALS_PATH}:/etc/uwsgi/vassals
+#        - ./python/uwsgi/fifos/:/tmp/uwsgi/fifos    #windows host不支持linux管道文件
       expose:
         - ${UWSGI_VASSALS_PORT}
       networks:
