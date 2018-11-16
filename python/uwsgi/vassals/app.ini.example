@@ -1,0 +1,9 @@
+[uwsgi]
+socket = :5000
+wsgi-file = app.py
+stats = :9191
+callable = app
+;py-autoreload = 3
+process=2
+uid=uwsgi
+gid=uwsgi
