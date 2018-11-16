@@ -15,5 +15,4 @@ USER uwsgi
 
 RUN mkdir -p /tmp/uwsgi/fifos
 
-
 CMD ["uwsgi", "--ini", "/etc/uwsgi/emperor.ini"]
