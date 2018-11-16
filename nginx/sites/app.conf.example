@@ -12,7 +12,7 @@ server {
     }
 
     location @uwsgi {
-        uwsgi_pass python:5000;
+        uwsgi_pass uwsgi:5000;
         include uwsgi_params;
     }
 

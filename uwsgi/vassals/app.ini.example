@@ -1,4 +1,5 @@
 [uwsgi]
+chdir = /var/www/%n
 socket = :5000
 wsgi-file = app.py
 stats = :9191

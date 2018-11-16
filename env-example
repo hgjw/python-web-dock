@@ -38,10 +38,10 @@ COMPOSE_CONVERT_WINDOWS_PATHS=1
 ################ Containers Customization #################
 ###########################################################
 
-### Python ################################################
+### uwsgi ################################################
 
 PYTHON_VERSION=3.7
-UWSGI_VASSALS_PATH=./python/uwsgi/vassals/
+UWSGI_VASSALS_PATH=./uwsgi/vassals/
 UWSGI_VASSALS_PORT=5000
 
 ### NGINX #################################################
